@@ -1,8 +1,5 @@
 package com.company;
 
-import com.google.gson.Gson;
-import org.json.*;
-
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -12,18 +9,15 @@ import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
 
+import com.company.Contanst;
+import com.company.ResponseSetAcceptFriend;
 import com.google.gson.Gson;
-import com.company.ResponseSearch;
-
-
-public class TestCaseSearchAPI {
-    public static ResponseSearch callAPI(Object token, Object keyword, Object user_id, Object index, Object count) throws Exception {
-        URL url = new URL(Contanst.search_API
-                + "?token="+ token
-                + "&keyword="+ keyword
-                + "&user_id="+ user_id
-                + "&index="+ index
-                + "&count="+ count);
+public class TestCaseSetAcceptFriendApi {
+    public static ResponseSetAcceptFriend callAPI(Object token, Object user_id, Object is_accepted) throws IOException {
+        URL url = new URL(Contanst.setAcceptFriendAPI +
+                "?token=" + token
+                + "&user_id=" + user_id
+                + "&is_accepted=" + is_accepted);
         System.out.println("CALL API: " + url);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
@@ -43,8 +37,7 @@ public class TestCaseSearchAPI {
             }
             Gson g = new Gson();
             System.out.println(content.toString());
-            ResponseSearch t =  g.fromJson(content.toString(), ResponseSearch.class);
-            return t;
+            return g.fromJson(content.toString(), ResponseSetAcceptFriend.class);
         } finally {
             connection.disconnect();
         }
