@@ -25,8 +25,9 @@ class ResponseLogin {
 class ResponseGet_verify_code{
     public String code;
     public String message;
-    public Data1 data;
-    public class Data1{
+    public Data data;
+    public class Data {
+        String verifyCode;
         String verifycode;
     }
 }
@@ -77,5 +78,17 @@ class ResponseGet_Saved_Search {
         String created;
     }
 }
+
+class ResponseCheck_new_version{
+    public String code;
+    public String message;
+    public Data5 data;
+    public class Data5{
+        String version;
+        String required;
+    }
+}
+
+
 
 

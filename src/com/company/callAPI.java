@@ -271,4 +271,29 @@ public class callAPI {
             con.disconnect();
         }
     }
+
+    public static ResponseCheck_new_version callAPICNV(String token, String last_update, String linkurl) throws Exception {
+        URL url = new URL(linkurl + "?token=" + token + "&last_update=" + last_update);
+        HttpURLConnection con = (HttpURLConnection) url.openConnection();
+        con.setRequestMethod("POST");
+        con.setDoOutput(true);
+        try (DataOutputStream writer = new DataOutputStream(con.getOutputStream())) {
+
+            StringBuilder content;
+            try (BufferedReader in = new BufferedReader(
+                    new InputStreamReader(con.getInputStream()))) {
+                String line;
+                content = new StringBuilder();
+                while ((line = in.readLine()) != null) {
+                    content.append(line);
+                    content.append(System.lineSeparator());
+                }
+            }
+            Gson g = new Gson();
+            System.out.println(content.toString());
+            return g.fromJson(content.toString(), ResponseCheck_new_version.class);
+        } finally {
+            con.disconnect();
+        }
+    }
 }

@@ -22,8 +22,8 @@ public class TestCaseSignUp {
     public static void Unittest3(String phonenumber, String password, String uuid, String url) throws Exception{
         System.out.println("Test case 3: Phonenumber is invalid");
         Response res = callAPI.callAPISignUp(phonenumber, password, uuid, url);
-        if ((!"1003".equals(res.code))) throw new AssertionError("wrong code");
-        if ((!"Parameter type is invalid".equals(res.message))) throw new AssertionError("wrong message");
+        if ((!"1003".equals(res.code)) && (!"1004".equals(res.code))) throw new AssertionError("wrong code");
+        if ((!"Parameter type is invalid".equals(res.message)) && (!"Parameter value is invalid".equals(res.code))) throw new AssertionError("wrong message");
 
         System.out.println("Finished");
 

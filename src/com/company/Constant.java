@@ -1,6 +1,12 @@
 package com.company;
 
 //Lớp Constant chứa các link url gọi tới các API của 6 nhóm đã xây dựng
+//Phonenumber:
+//0956774556
+//Password:
+//tyufrt5
+//UUID:
+//jkafagasdga7
 
 public class Constant {
     // 1 - nhóm Hàn Trung Kiên
@@ -12,7 +18,7 @@ public class Constant {
     // 4 - nhóm Phùng Việt Duy
     public static String DOMAIN_HOST_4 = "https://hust-fb-it4895.herokuapp.com/it4788";
     // 5 - nhóm Cao Văn Duy
-    public static String DOMAIN_HOST_5 = "https://it4895-nhom5.herokuapp.com/it4895/auth";
+    public static String DOMAIN_HOST_5 = "https://it4895-nhom5.herokuapp.com/it4788/auth";
     // 6 - nhóm Lê Xuân Quang
     public static String DOMAIN_HOST_6 = "https://project-facebook-clone.herokuapp.com/it4788/user";
 
@@ -51,7 +57,7 @@ public class Constant {
         public static String SEARCH = DOMAIN_HOST_1 + "/search";
         public static  String SET_ACCEPT_FRIEND = DOMAIN_HOST_1 + "/set_accept_friend";
         public static String GET_POST = DOMAIN_HOST_1 +"/get_post";
-        public static String GET_SAVED_SEARCH = DOMAIN_HOST_1 + "/get_saved_search";
+        public static String DEL_SAVED_SEARCH = DOMAIN_HOST_1 + "/del_saved_search";
     }
 
     public static class Nhom2API{
@@ -65,7 +71,7 @@ public class Constant {
         public static String SEARCH = DOMAIN_HOST_2 + "/search";
         public static String SET_ACCEPT_FRIEND = DOMAIN_HOST_2 + "/set_accept_friend";
         public static String GET_POST = DOMAIN_HOST_2 +"/get_post";
-        public static String GET_SAVED_SEARCH = DOMAIN_HOST_2 + "/get_saved_search";
+        public static String DEL_SAVED_SEARCH = DOMAIN_HOST_2 + "/del_saved_search";
     }
 
     public static class Nhom3API{
@@ -79,7 +85,7 @@ public class Constant {
         public static String SEARCH = DOMAIN_HOST_3 + "/search";
         public static String SET_ACCEPT_FRIEND = DOMAIN_HOST_3 + "/set_accept_friend";
         public static String GET_POST = DOMAIN_HOST_3 +"/get_post";
-        public static String GET_SAVED_SEARCH = DOMAIN_HOST_3 + "/get_saved_search";
+        public static String DEL_SAVED_SEARCH = DOMAIN_HOST_3 + "/del_saved_search";
     }
 
     public static class Nhom4API{
@@ -91,7 +97,7 @@ public class Constant {
         public static String CHECK_VERIFY_CODE = DOMAIN_HOST_4 + "/check_verify_code";
         public static String SEARCH = DOMAIN_HOST_4 + "/search";
         public static String GET_POST = DOMAIN_HOST_4 +"/get_post";
-        public static String GET_SAVED_SEARCH = DOMAIN_HOST_4 + "/get_saved_search";
+        public static String DEL_SAVED_SEARCH = DOMAIN_HOST_4 + "/del_saved_search";
     }
 
     public static class Nhom5API{
@@ -104,7 +110,7 @@ public class Constant {
         public static String SEARCH = DOMAIN_HOST_5 + "/search";
         public static String SET_ACCEPT_FRIEND = DOMAIN_HOST_5 + "/set_accept_friend";
         public static String GET_POST = DOMAIN_HOST_5 +"/get_post";
-        public static String GET_SAVED_SEARCH = DOMAIN_HOST_5 + "/get_saved_search";
+        public static String DEL_SAVED_SEARCH = DOMAIN_HOST_5 + "/del_saved_search";
         public static String CHECK_NEW_VERSION = DOMAIN_HOST_5 + "/check_new_version";
 
     }
