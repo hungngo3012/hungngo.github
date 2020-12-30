@@ -107,6 +107,20 @@ public class TestAPItuchon {
             Input.Login.nhap();
 
             ChonTestAPISetAcceptFriend.TestSetAcceptFriend();
+        } else if(url.contains("get_saved_search")){
+            ChonTestAPISearch.link = url;
+            String loginlink1 = url.replace("get_saved_search", "login");
+            System.out.println(url);
+            System.out.println(loginlink1);
+            ChonTestAPIGetSavedSearch.loginlink = loginlink1; //gán link url gọi tới API login
+
+            //Đăng nhập tài khoản đã có để thực thi test case
+            System.out.println("Đăng nhập tài khoản: ");
+            Input.Login.nhap();
+
+            //Chọn test case và thực thi test case đã chọn
+            System.out.println("Chọn trường hợp test api get_saved_search: ");
+            ChonTestAPIGetSavedSearch.TestGetSavedSearch();
         } else if(url.contains("search")){
             ChonTestAPISearch.link = url;
             String loginlink1 = url.replace("search", "login");
@@ -120,7 +134,7 @@ public class TestAPItuchon {
 
             //Chọn test case và thực thi test case đã chọn
             System.out.println("Chọn trường hợp test api search: ");
-            ChonTestAPISearch.TestChangepass();
+            ChonTestAPISearch.TestSearch();
         } else if(url.contains("check_new_version")){
             ChonTestAPICheckNewVersion.link = url;
             String loginlink = url.replace("check_new_version", "login");

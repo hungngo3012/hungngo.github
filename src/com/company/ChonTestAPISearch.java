@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ChonTestAPISearch {
     static String loginlink;
     static String link;
-    public static void TestChangepass() throws Exception {
+    public static void TestSearch() throws Exception {
         boolean k = true;
         while (k) {
             //Giao diện hiển thị

@@ -125,6 +125,24 @@ public class TestAPItudong {
             TestCaseSetBlock.Unittest8(url, loginlink);
             TestCaseSetBlock.Unittest9(url, loginlink);
             TestCaseSetBlock.Unittest10(url, loginlink);
+        } else if(url.contains("get_saved_search")) {
+            String loginlink = url.replace("get_saved_search", "login");
+            System.out.println(url);
+            System.out.println(loginlink);
+            //Đăng nhập tài khoản đã có để thực thi test case
+            System.out.println("Đăng nhập tài khoản: ");
+            Input.Login.nhap();
+
+            TestCaseGetSavedSearch.Unittest1(url, loginlink);
+            TestCaseGetSavedSearch.Unittest2(url, loginlink);
+            TestCaseGetSavedSearch.Unittest3(url, loginlink);
+            TestCaseGetSavedSearch.Unittest4(url, loginlink);
+            TestCaseGetSavedSearch.Unittest5(url, loginlink);
+            TestCaseGetSavedSearch.Unittest6(url, loginlink);
+            TestCaseGetSavedSearch.Unittest7(url, loginlink);
+            TestCaseGetSavedSearch.Unittest8(url, loginlink);
+            TestCaseGetSavedSearch.Unittest9(url, loginlink);
+            TestCaseGetSavedSearch.Unittest10(url, loginlink);
         } else if(url.contains("search")) {
             String loginlink = url.replace("search", "login");
             System.out.println(url);

@@ -25,7 +25,7 @@ public class ChonAPI {
                 "Nhập 9 chọn API GET_POST\n" +
                 "Nhập 10 chọn API SET_ACCEPT_FRIEND\n" +
                 "Nhập 11 chọn API SEARCH\n" +
-                "Nhập 12 chọn API DEL_SAVED_SEARCH\n");
+                "Nhập 12 chọn API GET_SAVED_SEARCH\n");
         Scanner sc = new Scanner(System.in);
         String pk1 = sc.next();
         int pick0 = Integer.parseInt(pk1);
@@ -70,7 +70,7 @@ public class ChonAPI {
                 url = Constant.APInhom1.SEARCH;
                 break;
             case 12:
-                url = Constant.APInhom1.DEL_SAVED_SEARCH;
+                url = Constant.APInhom1.GET_SAVED_SEARCH;
                 break;
             default:
                 url = Constant.APInhom1.SIGN_UP;
@@ -119,7 +119,7 @@ public class ChonAPI {
                 url = Constant.APInhom2.SEARCH;
                 break;
             case 12:
-                url = Constant.APInhom2.DEL_SAVED_SEARCH;
+                url = Constant.APInhom2.GET_SAVED_SEARCH;
                 break;
             default:
                 url = Constant.APInhom2.SIGN_UP;
@@ -167,7 +167,7 @@ public class ChonAPI {
                 url = Constant.APInhom3.SEARCH;
                 break;
             case 12:
-                url = Constant.APInhom3.DEL_SAVED_SEARCH;
+                url = Constant.APInhom3.GET_SAVED_SEARCH;
                 break;
             default:
                 url = Constant.APInhom3.SIGN_UP;
@@ -217,7 +217,7 @@ public class ChonAPI {
                 url = Constant.APInhom4.SEARCH;
                 break;
             case 12:
-                url = Constant.APInhom4.DEL_SAVED_SEARCH;
+                url = Constant.APInhom4.GET_SAVED_SEARCH;
                 break;
             default:
                 url = Constant.APInhom4.SIGN_UP;
@@ -264,7 +264,7 @@ public class ChonAPI {
                 url = Constant.APInhom5.SEARCH;
                 break;
             case 12:
-                url = Constant.APInhom5.DEL_SAVED_SEARCH;
+                url = Constant.APInhom5.GET_SAVED_SEARCH;
                 break;
             default:
                 url = Constant.APInhom5.SIGN_UP;
@@ -311,7 +311,7 @@ public class ChonAPI {
                 url = "Constant.APInhom6.SEARCH";
                 break;
             case 12:
-                url = "Constant.APInhom6.DEL_SAVED_SEARCH";
+                url = "Constant.APInhom6.GET_SAVED_SEARCH";
                 break;
             default:
                 url = Constant.APInhom6.SIGN_UP;
